@@ -8,57 +8,72 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="235dp"
             android:layout_height="wrap_content"
-            android:text="Bienvenido"
-            android:textSize="60sp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="25dp"/>
+            android:text="Registro"
+            android:textSize="60sp" />
 
-        //si desea puede borrar esto, para que no se vea como redundante//
-
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingresa tu correo y contraseña"
-            android:textSize="20sp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Correo electrónico"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="50dp"
-            android:inputType="textEmailAddress"
-            android:textSize="15sp"/>
+            android:layout_marginRight="25dp"
+            android:hint="Nombres"
+            android:inputType="text"
+            android:textSize="15sp" />
+
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Contraseña"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="15dp"
-            android:inputType="textPassword"
-            android:textSize="15sp"/>
-    </LinearLayout>
+            android:hint="Apellidos"
+            android:inputType="text"
+            android:textSize="15sp" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textSize="15sp" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom">
         <Button
+            android:id="@+id/btnregistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Iniciar sesión"
+            android:text="Registrase"
             android:layout_marginRight="25dp"
-            android:layout_marginLeft="25dp"/>
+            android:layout_marginLeft="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
