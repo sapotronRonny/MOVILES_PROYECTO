@@ -1,20 +1,43 @@
 package com.example.proyecto
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.text.style.ForegroundColorSpan
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val linkRegistro = findViewById<TextView>(R.id.linkRegistro)
+
+        val texto = "No tienes cuenta, registrate aquí"
+        val spannable = SpannableString(texto)
+
+        val clickableSpan = object : ClickableSpan() {
+            override fun onClick(widget: View) {
+                val intent = Intent(this@MainActivity, RegisterActivity::class.java)
+                startActivity(intent)
+            }
+
+            override fun updateDrawState(ds: android.text.TextPaint) {
+                // Quita subrayado y aplica color mostaza aquí mismo
+                ds.isUnderlineText = false
+                ds.color = Color.parseColor("#D4AF37")  // Mostaza dorado
+            }
         }
+
+        spannable.setSpan(clickableSpan, 18, texto.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        linkRegistro.text = spannable
+        linkRegistro.movementMethod = LinkMovementMethod.getInstance()
+        linkRegistro.highlightColor = Color.TRANSPARENT
     }
 }
