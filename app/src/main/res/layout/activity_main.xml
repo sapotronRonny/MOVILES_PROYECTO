@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,18 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Layout superior con campos de login -->
     <LinearLayout
+        android:id="@+id/layoutSuperior"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#f9f8ee"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutInferior">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bienvenido"
-            android:textSize="60sp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="25dp"/>
+            android:background="#f9f8ee"
+            android:paddingTop="40dp"
+            android:paddingBottom="0dp"
+            android:paddingStart="25dp">
+            <!--#e76700-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                android:textColor="@color/colorTextoBienvenida"
+                android:textSize="60sp" />
+        </LinearLayout>
 
 
         <TextView
@@ -26,42 +42,68 @@
             android:layout_height="wrap_content"
             android:text="Ingresa tu correo y contraseña"
             android:textSize="20sp"
+            android:textColor="@color/black"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/logodesingfinal" />
+
         <EditText
+            android:id="@+id/editTextCorreo"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:hint="Correo electrónico"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="50dp"
-            android:inputType="textEmailAddress"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:background="@drawable/cuadrados"
+            android:textColor="@color/black"
+            android:textColorHint="#6b6b6b"
+            android:paddingLeft="10dp"
+            android:paddingEnd="40dp" /> <!-- Icono de borrar en el extremo derecho -->
+
         <EditText
+            android:id="@+id/editTextContraseña"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:hint="Contraseña"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="15dp"
-            android:inputType="textPassword"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:background="@drawable/cuadrados"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="#6b6b6b"
+            android:paddingEnd="40dp"
+            android:paddingLeft="10dp"
+            android:inputType="textPassword" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:text="Iniciar sesión"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
-            android:layout_marginLeft="25dp"/>
-
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="#ff4a1c"
+            app:cornerRadius="12dp"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
+    <!-- Layout inferior con el enlace de registro -->
     <LinearLayout
+        android:id="@+id/layoutInferior"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#f9f8ee">
 
         <TextView
             android:id="@+id/linkRegistro"
@@ -69,8 +111,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"
+            android:text="¿No tienes cuenta? Regístrate"
+            android:textColor="@color/black"
             android:clickable="true"
             android:focusable="true"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="15dp" />
     </LinearLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

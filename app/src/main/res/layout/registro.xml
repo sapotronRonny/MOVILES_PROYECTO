@@ -11,7 +11,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#f9f8ee">
 
         <TextView
             android:layout_width="235dp"
@@ -19,11 +20,12 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="60dp"
             android:text="Registro"
+            android:textColor="#D4AF37"
             android:textSize="60sp" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
@@ -33,7 +35,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
@@ -43,7 +45,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
@@ -53,7 +55,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
@@ -66,14 +68,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom">
-        <Button
-            android:id="@+id/btnregistro"
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registrase"
+            android:layout_height="60dp"
+            android:text="REGISTRARSE"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:backgroundTint="#ff4a1c"
+            app:cornerRadius="12dp"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

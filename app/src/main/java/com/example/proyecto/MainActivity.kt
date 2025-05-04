@@ -3,14 +3,19 @@ package com.example.proyecto
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Editable
 import android.text.SpannableString
 import android.text.Spanned
+import android.text.TextWatcher
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
+import android.view.MotionEvent
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +34,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun updateDrawState(ds: android.text.TextPaint) {
-                // Quita subrayado y aplica color mostaza aquí mismo
                 ds.isUnderlineText = false
                 ds.color = Color.parseColor("#D4AF37")  // Mostaza dorado
             }
@@ -39,5 +43,7 @@ class MainActivity : AppCompatActivity() {
         linkRegistro.text = spannable
         linkRegistro.movementMethod = LinkMovementMethod.getInstance()
         linkRegistro.highlightColor = Color.TRANSPARENT
+
+
     }
 }
