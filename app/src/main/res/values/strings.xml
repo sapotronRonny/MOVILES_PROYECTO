@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Proyecto</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="ingresa_datos">Ingresa tu correo y contraseña</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta? Regístrate</string>
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

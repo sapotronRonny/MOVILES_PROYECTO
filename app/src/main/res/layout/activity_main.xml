@@ -17,8 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/layoutInferior">
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,21 +24,19 @@
             android:paddingTop="40dp"
             android:paddingBottom="0dp"
             android:paddingStart="25dp">
-            <!--#e76700-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bienvenido"
+                android:text="@string/bienvenido"
                 android:textColor="@color/colorTextoBienvenida"
                 android:textSize="60sp" />
         </LinearLayout>
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingresa tu correo y contraseña"
+            android:text="@string/ingresa_datos"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_marginLeft="25dp"
@@ -54,46 +50,70 @@
             android:layout_marginBottom="30dp"
             android:src="@drawable/logodesingfinal" />
 
-        <EditText
-            android:id="@+id/editTextCorreo"
+        <!-- Campo de correo electrónico -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Correo electrónico"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:textSize="15sp"
-            android:background="@drawable/cuadrados"
-            android:textColor="@color/black"
-            android:textColorHint="#6b6b6b"
-            android:paddingLeft="10dp"
-            android:paddingEnd="40dp" /> <!-- Icono de borrar en el extremo derecho -->
+            app:boxBackgroundMode="outlined"
+            app:boxStrokeColor="#D4AF37"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            android:background="@drawable/cuadrados">
 
-        <EditText
-            android:id="@+id/editTextContraseña"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/correo_electronico"
+                android:textColor="@color/black"
+                android:textColorHint="#6b6b6b"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="40dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Contraseña"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:textSize="15sp"
-            android:background="@drawable/cuadrados"
             android:layout_marginTop="20dp"
-            android:textColor="@color/black"
-            android:textColorHint="#6b6b6b"
-            android:paddingEnd="40dp"
-            android:paddingLeft="10dp"
-            android:inputType="textPassword" />
+            app:boxBackgroundMode="outlined"
+            app:boxStrokeColor="#D4AF37"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:endIconMode="password_toggle"
+            android:background="@drawable/cuadrados">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/contrasena"
+                android:textColor="@color/black"
+                android:textColorHint="#6b6b6b"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Iniciar sesión"
+            android:text="@string/iniciar_sesion"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:backgroundTint="#ff4a1c"
             app:cornerRadius="12dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <!-- Layout inferior con el enlace de registro -->
@@ -111,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textSize="16sp"
-            android:text="¿No tienes cuenta? Regístrate"
+            android:text="@string/no_tienes_cuenta"
             android:textColor="@color/black"
             android:clickable="true"
             android:focusable="true"
