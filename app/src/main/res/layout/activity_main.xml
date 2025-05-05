@@ -106,6 +106,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnIniciarSesion"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="@string/iniciar_sesion"
@@ -115,6 +116,7 @@
             android:backgroundTint="#ff4a1c"
             app:cornerRadius="12dp"
             android:textColor="#FFFFFF" />
+
     </LinearLayout>
 
     <!-- Layout inferior con el enlace de registro -->
