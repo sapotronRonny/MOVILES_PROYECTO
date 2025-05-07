@@ -57,11 +57,10 @@ class RegisterActivity : AppCompatActivity() {
         btnLimpiar = findViewById(R.id.btnLimpiar)
 
         val provincias = arrayOf(
-            "Azuay", "Bolívar", "Cañar", "Carchi", "Chimborazo", "Cotopaxi",
-            "El Oro", "Esmeraldas", "Galápagos", "Guayas", "Imbabura", "Loja",
-            "Los Ríos", "Manabí", "Morona Santiago", "Napo", "Orellana",
-            "Pastaza", "Pichincha", "Santa Elena", "Santo Domingo de los Tsáchilas",
-            "Sucumbíos", "Tungurahua", "Zamora Chinchipe"
+            "Bolívar", "Chone", "El Carmen", "Flavio Alfaro", "Jama", "Jaramijó",
+            "Jipijapa", "Junín", "Manta", "Montecristi", "Olmedo", "Paján",
+            "Pedernales", "Pichincha", "Portoviejo", "Puerto López", "Rocafuerte",
+            "Santa Ana", "Sucre", "Tosagua", "24 de Mayo"
         )
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, provincias)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -81,25 +80,32 @@ class RegisterActivity : AppCompatActivity() {
         val correo = etCorreo.text.toString()
         val contraseña = etContraseña.text.toString()
 
-        if (nombre.isEmpty()) {
-            etNombre.error = "Debe ingresar datos válidos"
-            return
-        } else if (nombre.length < 8) {
-            etNombre.error = "El nombre debe tener al menos 8 caracteres"
-            return
-        } else {
-            etNombre.error = null
-        }
+        // Validaciones del nombre
+            if (nombre.isEmpty()) {
+                etNombre.error = "Debe ingresar datos válidos"
+                return
+            } else if (nombre.length < 8) {
+                etNombre.error = "El nombre debe tener al menos 8 caracteres"
+                return
+            } else if (nombre.any { it.isDigit() }) {
+                etNombre.error = "El nombre no debe contener números"
+                return
+            } else {
+                etNombre.error = null
+            }
+//validacion de correo
+        val regex = Regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")
 
         if (correo.isEmpty()) {
-            etCorreo.error = "Debe ingresar datos válidos"
+            etCorreo.error = "Debe ingresar un correo electrónico"
             return
-        } else if (!correo.contains("@") || !correo.endsWith("gmail.com")) {
-            etCorreo.error = "Dominio no válido. Solo se permite Gmail"
+        } else if (!regex.matches(correo)) {
+            etCorreo.error = "Formato de correo no válido"
             return
         } else {
             etCorreo.error = null
         }
+//validacion de contraseña
 
         if (contraseña.length < 8 || !contraseña.any { it.isDigit() } || !contraseña.any { it.isUpperCase() }) {
             etContraseña.error = "La contraseña debe tener al menos 8 caracteres, una mayúscula y un número"
