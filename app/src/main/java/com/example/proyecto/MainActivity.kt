@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        spannable.setSpan(clickableSpan, 21, texto.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(clickableSpan, 18, texto.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         linkRegistro.text = spannable
         linkRegistro.movementMethod = LinkMovementMethod.getInstance()
 

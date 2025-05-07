@@ -63,7 +63,8 @@
             app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusBottomEnd="8dp"
-            android:background="@drawable/cuadrados">
+            android:background="@drawable/cuadrados"
+            app:startIconDrawable="@drawable/personita">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextCorreo"
