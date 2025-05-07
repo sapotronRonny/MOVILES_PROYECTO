@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Proyecto</string>
-
     <!-- Títulos y etiquetas -->
     <string name="titulo_registro">Registro</string>
     <string name="hint_nombre">Escriba sus nombres completos</string>
