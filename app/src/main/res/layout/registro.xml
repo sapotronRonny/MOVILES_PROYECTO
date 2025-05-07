@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/titulo_registro"
+                android:text="@string/registro"
                 android:textColor="#D4AF37"
                 android:textSize="60sp"
                 android:layout_gravity="center_horizontal"
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
-                android:hint="@string/hint_nombre"
+                android:hint="@string/nombre"
                 android:inputType="text"
                 android:textSize="15sp" />
 
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="16dp"
-                android:hint="@string/hint_correo"
+                android:hint="@string/correo"
                 android:inputType="textEmailAddress"
                 android:textSize="15sp" />
 
@@ -52,14 +52,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="16dp"
-                android:hint="@string/hint_contraseña"
+                android:hint="@string/contraseña"
                 android:inputType="textPassword"
                 android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_genero"
+                android:text="@string/genero"
                 android:textSize="16sp"
                 android:layout_marginTop="24dp" />
 
@@ -73,20 +73,20 @@
                     android:id="@+id/rbMasculino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/genero_masculino" />
+                    android:text="@string/masculino" />
 
                 <RadioButton
                     android:id="@+id/rbFemenino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/genero_femenino"
+                    android:text="@string/femenino"
                     android:layout_marginStart="16dp" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_categoria"
+                android:text="@string/categoria"
                 android:textSize="16sp"
                 android:layout_marginTop="24dp" />
 
@@ -94,36 +94,36 @@
                 android:id="@+id/chkPolitica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/categoria_politica" />
+                android:text="@string/politica" />
 
             <CheckBox
                 android:id="@+id/chkDeportes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/categoria_deporte" />
+                android:text="@string/deporte" />
 
             <CheckBox
                 android:id="@+id/chkCultura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/categoria_cultura" />
+                android:text="@string/cultura" />
 
             <CheckBox
                 android:id="@+id/chkEducacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/categoria_educacion" />
+                android:text="@string/educacion" />
 
             <CheckBox
                 android:id="@+id/chkSalud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/categoria_salud" />
+                android:text="@string/salud" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_provincias"
+                android:text="@string/provincias"
                 android:textSize="16sp"
                 android:layout_marginTop="24dp" />
 
@@ -136,14 +136,14 @@
                 android:id="@+id/btnRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_registrar"
+                android:text="@string/registrar"
                 android:layout_marginTop="24dp" />
 
             <Button
                 android:id="@+id/btnLimpiar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_limpiar"
+                android:text="@string/limpiar"
                 android:layout_marginTop="12dp" />
 
             <androidx.cardview.widget.CardView

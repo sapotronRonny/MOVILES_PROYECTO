@@ -1,28 +1,28 @@
 <resources>
     <string name="app_name">Proyecto</string>
     <!-- Títulos y etiquetas -->
-    <string name="titulo_registro">Registro</string>
-    <string name="hint_nombre">Escriba sus nombres completos</string>
-    <string name="hint_correo">Correo electrónico</string>
-    <string name="hint_contraseña">Contraseña</string>
-    <string name="label_genero">Género</string>
-    <string name="label_categoria">Categoría de noticias</string>
-    <string name="label_provincias">Provincias</string>
+    <string name="registro">Registro</string>
+    <string name="nombre">Escriba sus nombres completos</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="genero">Género</string>
+    <string name="categoria">Categoría de noticias</string>
+    <string name="provincias">Provincias</string>
 
     <!-- Género -->
-    <string name="genero_masculino">Masculino</string>
-    <string name="genero_femenino">Femenino</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
 
     <!-- Categorías -->
-    <string name="categoria_politica">Política</string>
-    <string name="categoria_deporte">Deporte</string>
-    <string name="categoria_cultura">Cultura</string>
-    <string name="categoria_educacion">Educación</string>
-    <string name="categoria_salud">Salud</string>
+    <string name="politica">Política</string>
+    <string name="deporte">Deporte</string>
+    <string name="cultura">Cultura</string>
+    <string name="educacion">Educación</string>
+    <string name="salud">Salud</string>
 
     <!-- Botones -->
-    <string name="btn_registrar">Registrar</string>
-    <string name="btn_limpiar">Limpiar</string>
+    <string name="registrar">Registrar</string>
+    <string name="limpiar">Limpiar</string>
 
     <!-- Resultado -->
     <string name="mostrar_datos">Mostrar datos</string>
