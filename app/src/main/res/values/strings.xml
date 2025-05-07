@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Proyecto</string>
+
+    <!-- Títulos y etiquetas -->
+    <string name="titulo_registro">Registro</string>
+    <string name="hint_nombre">Escriba sus nombres completos</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_contraseña">Contraseña</string>
+    <string name="label_genero">Género</string>
+    <string name="label_categoria">Categoría de noticias</string>
+    <string name="label_provincias">Provincias</string>
+
+    <!-- Género -->
+    <string name="genero_masculino">Masculino</string>
+    <string name="genero_femenino">Femenino</string>
+
+    <!-- Categorías -->
+    <string name="categoria_politica">Política</string>
+    <string name="categoria_deporte">Deporte</string>
+    <string name="categoria_cultura">Cultura</string>
+    <string name="categoria_educacion">Educación</string>
+    <string name="categoria_salud">Salud</string>
+
+    <!-- Botones -->
+    <string name="btn_registrar">Registrar</string>
+    <string name="btn_limpiar">Limpiar</string>
+
+    <!-- Resultado -->
+    <string name="mostrar_datos">Mostrar datos</string>
 </resources>
